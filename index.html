@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Modular</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Café Aurora</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Café de especialidad de Medellín</h1>
+            <p>Granos seleccionados de fincas colombianas</p>
+        </section>
+        <section>
+            <h2>Lo más pedido</h2>
+            <article>
+                <h3>Latte de la casa</h3>
+                <p>Espresso doble con leche vaporizada</p>
+            </article>
+        </section>
+        <aside>
+            <p>Horario: lunes a sábado, 7:00 a.m. - 7:00 p.m.</p>
+        </aside>
+    </main>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Tus datos</legend>
+            <p>
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3">
+            </p>
+            <p>
+                <label for="correo"> Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+            </p>
+            <p>
+                <label for="telefono">Celular (10 dígitos)</label>
+                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{10}"
+                    title="Escribe 10 números, sin espacios">
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Tu mensaje</legend>
+            <p>
+                <label for="motivo">Motivo</label>
+                <select name="motivo" id="motivo" required>
+                    <option value="">Seleccionar una opción</option>
+                    <option value="reserva">Reservar</option>
+                    <option value="pedido">Pedido para empresa</option>
+                </select>
+            </p>
+            <p>
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" minlength="10" required></textarea>
+            </p>
+        </fieldset>
+        <p><button type="submit">Enviar mensaje</button></p>
+    </form>
+
+    <footer>
+        <p>&copy; 2026 Café Aurora</p>
+    </footer>
+</body>
+
+</html>
