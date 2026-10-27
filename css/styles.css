@@ -1,0 +1,70 @@
+/* 1. Variable del proyecto */
+:root {
+    --color-primario: #6f4e37; /* Café oscuro para el header */
+    --color-acento: #d9822b;
+    --color-texto: #2b2b2b;
+    --color-fondo: #f6efe6; /* Corregido: se llamaba --fuente-fondo y se usa para el fondo general */
+    --fuente-base: "Poppins", Arial, sans-serif;
+}
+
+/* 2. Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: var(--fuente-base);
+    color: var(--color-texto);
+    background-color: var(--color-fondo); /* Usamos la variable correcta */
+    line-height: 1.6;
+}
+
+/* 3. Encabezado y navegación */
+header {
+    padding: 1.5rem 2rem;
+    background-color: var(--color-primario); /* Corregido: en la imagen el header es café oscuro, no naranja */
+}
+
+/* Estilos para el título y el menú dentro del header */
+header h1 {
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem; /* Separa los elementos del menú horizontalmente */
+}
+
+header a { 
+    color: #fff; 
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus { 
+    color: var(--color-acento); /* Al pasar el mouse se pone de color acento (naranja) */
+}
+
+/* 4. Contenido */
+main {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.tarjeta {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff; /* Faltaba el punto y coma aquí */
+}
+
+/* Estilos adicionales para los títulos de las tarjetas */
+.tarjeta h3 {
+    margin-top: 0;
+    color: var(--color-primario);
+}
