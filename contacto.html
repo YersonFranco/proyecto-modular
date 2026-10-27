@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Escríbenos para hacer una reserva o un pedido para tu empresa en Café Aurora, Medellín. Completa el formulario de contacto y te respondemos.">
+    <title>Café Aurora | Contacto y reservas</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <p><a href="index.html">Café Aurora</a></p>
+        <nav aria-label="Principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Contacto</h1>
+
+        <section>
+            <h2>Escríbenos</h2>
+            <p>Cuéntanos qué necesitas y te respondemos pronto. Todos los campos son obligatorios, excepto el celular.
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Tus datos</legend>
+
+                    <p>
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="3" maxlength="60"
+                            placeholder="Ej. Ana Pérez" required>
+                    </p>
+
+                    <p>
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" autocomplete="email"
+                            placeholder="ejemplo@correo.com" required>
+                    </p>
+
+                    <p>
+                        <label for="telefono">Celular (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="3[0-9]{9}"
+                            title="10 dígitos, sin espacios, que empiecen por 3" placeholder="Ej. 3001234567">
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tu mensaje</legend>
+
+                    <p>
+                        <label for="motivo">Motivo</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="reserva">Reservar</option>
+                            <option value="pedido">Pedido para empresa</option>
+                            <option value="consulta">Consulta general</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" minlength="10" maxlength="500"
+                            placeholder="Cuéntanos cuántas personas son, qué día o qué necesitas" required></textarea>
+                    </p>
+                </fieldset>
+
+                <p><button type="submit">Enviar mensaje</button></p>
+
+            </form>
+        </section>
+
+        <aside>
+            <h2>Horario de atención</h2>
+            <p>Lunes a sábado, de 7:00 a. m. a 7:00 p. m.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Café Aurora</p>
+        <p>Escríbenos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a>.</p>
+    </footer>
+
+</body>
+
+</html>
