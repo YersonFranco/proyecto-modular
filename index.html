@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Café Aurora es una cafetería de especialidad en Medellín con granos seleccionados de fincas colombianas. Conoce lo más pedido y nuestro horario.">
+    <meta name="description" content="Café Aurora es una cafetería de especialidad en Medellín con granos seleccionados de fincas colombianas. Conoce lo más pedido y nuestro horario.">
     <title>Café Aurora | Café de especialidad en Medellín</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-
-    <header>
-        <p><a href="index.html">Café Aurora</a></p>
-        <nav aria-label="Principal">
-            <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="logo"><a href="index.html">Café Aurora</a></p>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-
-        <section>
-            <h1>Café de especialidad de Medellín</h1>
-            <p>Granos seleccionados de fincas colombianas, preparados al momento para empezar bien el día.</p>
-            <img src="img/portada.jpg" alt="Barista sirviendo un café en el mostrador de Café Aurora" width="600">
-            <p><a href="servicios.html">Ver nuestros servicios</a></p>
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Café colombiano · Medellín</p>
+                <h1>Café de especialidad de Medellín</h1>
+                <p>Granos seleccionados de fincas colombianas, preparados al momento para empezar bien el día.</p>
+                <a class="button-link" href="servicios.html">Ver nuestros servicios</a>
+            </div>
+            <img class="hero-image" src="img/portada.jpg" alt="Barista sirviendo un café en el mostrador de Café Aurora" width="600">
         </section>
 
-        <section>
-            <h2>Lo más pedido</h2>
-
-            <article>
-                <h3>Latte de la casa</h3>
-                <img src="img/latte.jpg" alt="Taza de latte con arte en la espuma sobre una mesa de madera" width="300">
-                <p>Espresso doble con leche vaporizada.</p>
-            </article>
-
-            <article>
-                <h3>Cappuccino clásico</h3>
-                <img src="img/cappuccino.jpg" alt="Cappuccino con espuma espesa servido en una taza blanca" width="300">
-                <p>Espresso con leche y una capa generosa de espuma.</p>
-            </article>
-
-            <article>
-                <h3>Café filtrado de origen</h3>
-                <img src="img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio" width="300">
-                <p>Grano de una sola finca, preparado con método de goteo.</p>
-            </article>
+        <section class="section-block">
+            <div class="section-heading">
+                <p class="eyebrow">Favoritos de la casa</p>
+                <h2>Lo más pedido</h2>
+            </div>
+            <div class="card-grid productos">
+                <article class="card tarjeta">
+                    <img src="img/latte.jpg" alt="Taza de latte con arte en la espuma sobre una mesa de madera" width="300">
+                    <div class="card-content">
+                        <h3>Latte de la casa</h3>
+                        <p>Espresso doble con leche vaporizada.</p>
+                    </div>
+                </article>
+                <article class="card tarjeta">
+                    <img src="img/cappuccino.jpg" alt="Cappuccino con espuma espesa servido en una taza blanca" width="300">
+                    <div class="card-content">
+                        <h3>Cappuccino clásico</h3>
+                        <p>Espresso con leche y una capa generosa de espuma.</p>
+                    </div>
+                </article>
+                <article class="card tarjeta">
+                    <img src="img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio" width="300">
+                    <div class="card-content">
+                        <h3>Café filtrado de origen</h3>
+                        <p>Grano de una sola finca, preparado con método de goteo.</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
-        <aside>
-            <h2>Horario de atención</h2>
+        <aside class="hours">
+            <div>
+                <p class="eyebrow">Te esperamos</p>
+                <h2>Horario de atención</h2>
+            </div>
             <p>Lunes a sábado, de 7:00 a. m. a 7:00 p. m.</p>
         </aside>
-
     </main>
 
-    <footer>
-        <p>&copy; 2026 Café Aurora</p>
-        <p>Escríbenos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a> o visita la página de <a
-                href="contacto.html">contacto</a>.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Café Aurora</p>
+            <p>Escríbenos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a> o visita la página de <a href="contacto.html">contacto</a>.</p>
+        </div>
     </footer>
-
 </body>
-
 </html>

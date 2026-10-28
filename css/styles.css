@@ -1,70 +1,537 @@
-/* 1. Variable del proyecto */
+/* ========================================
+   1. VARIABLES
+======================================== */
 :root {
-    --color-primario: #6f4e37; /* Café oscuro para el header */
+    --color-primario: #6f4e37;
+    --color-primario-oscuro: #513824;
     --color-acento: #d9822b;
     --color-texto: #2b2b2b;
-    --color-fondo: #f6efe6; /* Corregido: se llamaba --fuente-fondo y se usa para el fondo general */
-    --fuente-base: "Poppins", Arial, sans-serif;
+    --color-fondo: #f6efe6;
+    --color-blanco: #ffffff;
+    --color-borde: #e5d9cc;
+    --fuente-base: Arial, Helvetica, sans-serif;
+    --radio: 0.65rem;
+    --sombra: 0 6px 20px rgb(43 31 20 / 10%);
 }
 
-/* 2. Base */
-*, *::before, *::after { box-sizing: border-box; }
+/* ========================================
+   2. BASE
+======================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
-    font-family: var(--fuente-base);
+    background: var(--color-fondo);
     color: var(--color-texto);
-    background-color: var(--color-fondo); /* Usamos la variable correcta */
-    line-height: 1.6;
+    font-family: var(--fuente-base);
+    font-size: 16px;
+    line-height: 1.65;
 }
 
-/* 3. Encabezado y navegación */
-header {
-    padding: 1.5rem 2rem;
-    background-color: var(--color-primario); /* Corregido: en la imagen el header es café oscuro, no naranja */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Estilos para el título y el menú dentro del header */
-header h1 {
-    margin: 0 0 0.5rem 0;
-    color: #fff;
-    font-size: 1.8rem;
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--color-primario-oscuro);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--color-primario);
+}
+
+a:hover {
+    color: #9a531b;
+}
+
+/* ========================================
+   3. CABECERA Y NAVEGACIÓN
+======================================== */
+.site-header {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 1rem 1.5rem;
+}
+
+.header-inner {
+    max-width: 70rem;
+    margin: 0 auto;
     display: flex;
-    gap: 1.5rem; /* Separa los elementos del menú horizontalmente */
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
-header a { 
-    color: #fff; 
+.logo {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.logo a {
+    color: var(--color-blanco);
     text-decoration: none;
 }
 
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.45rem 0;
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 600;
+}
+
 nav a:hover,
-nav a:focus { 
-    color: var(--color-acento); /* Al pasar el mouse se pone de color acento (naranja) */
+nav a:focus-visible {
+    color: #ffd29e;
 }
 
-/* 4. Contenido */
+nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+/* ========================================
+   4. ESTRUCTURA GENERAL
+======================================== */
 main {
-    max-width: 60rem;
+    width: min(100% - 2rem, 70rem);
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 3rem 0;
 }
 
-.tarjeta {
-    padding: 1.5rem;
+.section-block {
+    margin-top: 3rem;
+}
+
+.section-heading {
+    margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+    margin-bottom: 0.5rem;
+    color: #9a531b;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.page-intro {
+    max-width: 48rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ========================================
+   5. PORTADA
+======================================== */
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.hero-copy > p:not(.eyebrow) {
+    max-width: 34rem;
     margin-bottom: 1.5rem;
-    border-radius: 0.5rem;
-    background-color: #fff; /* Faltaba el punto y coma aquí */
+    font-size: 1.1rem;
 }
 
-/* Estilos adicionales para los títulos de las tarjetas */
-.tarjeta h3 {
-    margin-top: 0;
+.hero-image {
+    width: 100%;
+    max-height: 26rem;
+    object-fit: cover;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.button-link {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.4rem;
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.button-link:hover,
+.button-link:focus-visible {
+    background: var(--color-acento);
+    color: #21170f;
+}
+
+/* ========================================
+   6. TARJETAS Y CUADRÍCULAS
+======================================== */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.card,
+.tarjeta {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgb(111 78 55 / 8%);
+    border-radius: var(--radio);
+    background: var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+.card > img {
+    width: 100%;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.25rem;
+}
+
+.card-content h3 {
     color: var(--color-primario);
+}
+
+.card-content p:last-child {
+    margin-bottom: 0;
+}
+
+.card-content a {
+    font-weight: 700;
+}
+
+/* ========================================
+   7. HORARIO
+======================================== */
+.hours {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding: 1.5rem 1.75rem;
+    border-left: 5px solid var(--color-acento);
+    border-radius: var(--radio);
+    background: var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+.hours h2 {
+    margin-bottom: 0;
+}
+
+.hours > p {
+    margin: 0;
+}
+
+/* ========================================
+   8. TABLA DE PRECIOS
+======================================== */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-blanco);
+}
+
+caption {
+    padding: 1rem;
+    background: var(--color-blanco);
+    color: var(--color-primario);
+    font-weight: 700;
+    text-align: left;
+}
+
+thead {
+    background: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+th,
+td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+tbody th {
+    color: var(--color-primario-oscuro);
+}
+
+tbody tr:nth-child(even) {
+    background: #fbf8f4;
+}
+
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* ========================================
+   9. FORMULARIO
+======================================== */
+.contact-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(15rem, 0.8fr);
+    align-items: start;
+    gap: 2rem;
+}
+
+.contact-card {
+    padding: 1.75rem;
+    border-radius: var(--radio);
+    background: var(--color-blanco);
+    box-shadow: var(--sombra);
+}
+
+.contact-card h2 {
+    margin-bottom: 1.5rem;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 0.45rem;
+}
+
+legend {
+    padding: 0 0.4rem;
+    color: var(--color-primario);
+    font-weight: 700;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+.form-field:last-child {
+    margin-bottom: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem 0.85rem;
+    border: 1px solid #cbb9a8;
+    border-radius: 0.35rem;
+    background: #fff;
+    color: var(--color-texto);
+    font: inherit;
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 1px;
+}
+
+button {
+    padding: 0.85rem 1.3rem;
+    border: 0;
+    border-radius: 0.4rem;
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--color-acento);
+    color: #21170f;
+}
+
+.contact-hours {
+    display: block;
+    margin-top: 0;
+}
+
+.contact-hours .hours-time {
+    color: var(--color-primario);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+/* ========================================
+   10. PIE DE PÁGINA
+======================================== */
+.site-footer {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: var(--color-primario-oscuro);
+    color: var(--color-blanco);
+}
+
+.footer-inner {
+    width: min(100%, 70rem);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+}
+
+.footer-inner p {
+    margin: 0;
+}
+
+.site-footer a {
+    color: #ffd29e;
+}
+
+/* ========================================
+   11. RESPONSIVE: TABLETAS Y CELULARES
+======================================== */
+@media (max-width: 800px) {
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .hero-image {
+        max-height: 22rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hours {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    main {
+        width: min(100% - 1.25rem, 70rem);
+        padding: 2rem 0;
+    }
+
+    .site-header {
+        padding: 1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card > img {
+        height: auto;
+        max-height: 18rem;
+    }
+
+    .hours {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.25rem;
+    }
+
+    .contact-card {
+        padding: 1rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    th,
+    td {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

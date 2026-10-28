@@ -1,117 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Conoce los servicios de Café Aurora en Medellín: café en el local, reservas de mesa y pedidos para empresas. Mira también nuestra carta de bebidas con precios.">
+    <meta name="description" content="Conoce los servicios de Café Aurora en Medellín: café en el local, reservas de mesa y pedidos para empresas. Mira también nuestra carta de bebidas con precios.">
     <title>Café Aurora | Servicios y carta en Medellín</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-
-    <header>
-        <p><a href="index.html">Café Aurora</a></p>
-        <nav aria-label="Principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html" aria-current="page">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="header-inner">
+            <p class="logo"><a href="index.html">Café Aurora</a></p>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html" aria-current="page">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h1>Nuestros servicios</h1>
-        <p>En Café Aurora preparamos café de especialidad con granos de fincas colombianas. Estas son las formas de
-            disfrutarlo.</p>
-
-        <section>
-            <h2>Lo que hacemos</h2>
-
-            <article>
-                <h3>Café en el local</h3>
-                <img src="img/servicio-local.jpg" alt="Mesas de madera con tazas de café en el interior de Café Aurora"
-                    width="400">
-                <p>Un espacio tranquilo para trabajar, conversar o leer, con café preparado al momento por nuestros
-                    baristas.</p>
-                <p>Mira <a href="index.html">lo más pedido</a> en la página de inicio.</p>
-            </article>
-
-            <article>
-                <h3>Reservas de mesa</h3>
-                <img src="img/servicio-reservas.jpg"
-                    alt="Mesa larga preparada para un grupo con tazas y platos de postre" width="400">
-                <p>Reserva tu mesa para una reunión o una celebración pequeña y llega sin esperar. <strong>Indícanos
-                        cuántas personas son</strong> en el mensaje.</p>
-                <p><a href="contacto.html">Reservar una mesa</a></p>
-            </article>
-
-            <article>
-                <h3>Pedidos para empresas</h3>
-                <img src="img/servicio-empresas.jpg"
-                    alt="Termos de café y vasos listos para llevar sobre una mesa de oficina" width="400">
-                <p>Llevamos café a tu oficina o evento, en termos y con todo lo necesario para servirlo. <strong>Pide
-                        con un día de anticipación.</strong></p>
-                <p><a href="contacto.html">Hacer un pedido para mi empresa</a></p>
-            </article>
+        <section class="page-intro">
+            <p class="eyebrow">Más que una taza de café</p>
+            <h1>Nuestros servicios</h1>
+            <p>En Café Aurora preparamos café de especialidad con granos de fincas colombianas. Estas son las formas de disfrutarlo.</p>
         </section>
 
-        <section>
-            <h2>Nuestra carta</h2>
-            <table>
-                <caption>Carta de bebidas con precio por tamaño</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Bebida</th>
-                        <th scope="col">Pequeña (8 oz)</th>
-                        <th scope="col">Grande (12 oz)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">Espresso</th>
-                        <td>$4.500</td>
-                        <td>$6.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Latte de la casa</th>
-                        <td>$8.500</td>
-                        <td>$10.500</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Cappuccino clásico</th>
-                        <td>$8.000</td>
-                        <td>$10.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Café filtrado de origen</th>
-                        <td>$7.000</td>
-                        <td>$9.000</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Chocolate caliente</th>
-                        <td>$7.500</td>
-                        <td>$9.500</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section class="section-block">
+            <div class="section-heading">
+                <h2>Lo que hacemos</h2>
+            </div>
+            <div class="card-grid servicios">
+                <article class="card tarjeta">
+                    <img src="img/servicio-local.jpg" alt="Mesas de madera con tazas de café en el interior de Café Aurora" width="400">
+                    <div class="card-content">
+                        <h3>Café en el local</h3>
+                        <p>Un espacio tranquilo para trabajar, conversar o leer, con café preparado al momento por nuestros baristas.</p>
+                        <p>Mira <a href="index.html">lo más pedido</a> en la página de inicio.</p>
+                    </div>
+                </article>
+                <article class="card tarjeta">
+                    <img src="img/servicio-reservas.jpg" alt="Mesa larga preparada para un grupo con tazas y platos de postre" width="400">
+                    <div class="card-content">
+                        <h3>Reservas de mesa</h3>
+                        <p>Reserva tu mesa para una reunión o una celebración pequeña y llega sin esperar. <strong>Indícanos cuántas personas son</strong> en el mensaje.</p>
+                        <p><a href="contacto.html">Reservar una mesa</a></p>
+                    </div>
+                </article>
+                <article class="card tarjeta">
+                    <img src="img/servicio-empresas.jpg" alt="Termos de café y vasos listos para llevar sobre una mesa de oficina" width="400">
+                    <div class="card-content">
+                        <h3>Pedidos para empresas</h3>
+                        <p>Llevamos café a tu oficina o evento, en termos y con todo lo necesario para servirlo. <strong>Pide con un día de anticipación.</strong></p>
+                        <p><a href="contacto.html">Hacer un pedido para mi empresa</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <div class="section-heading">
+                <p class="eyebrow">Preparado a tu gusto</p>
+                <h2>Nuestra carta</h2>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <caption>Carta de bebidas con precio por tamaño</caption>
+                    <thead>
+                        <tr><th scope="col">Bebida</th><th scope="col">Pequeña (8 oz)</th><th scope="col">Grande (12 oz)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Espresso</th><td>$4.500</td><td>$6.000</td></tr>
+                        <tr><th scope="row">Latte de la casa</th><td>$8.500</td><td>$10.500</td></tr>
+                        <tr><th scope="row">Cappuccino clásico</th><td>$8.000</td><td>$10.000</td></tr>
+                        <tr><th scope="row">Café filtrado de origen</th><td>$7.000</td><td>$9.000</td></tr>
+                        <tr><th scope="row">Chocolate caliente</th><td>$7.500</td><td>$9.500</td></tr>
+                    </tbody>
+                </table>
+            </div>
             <p>¿Tienes alguna duda sobre la carta? <a href="contacto.html">Escríbenos</a>.</p>
         </section>
 
-        <aside>
-            <h2>Horario de atención</h2>
+        <aside class="hours">
+            <div><p class="eyebrow">Te esperamos</p><h2>Horario de atención</h2></div>
             <p>Lunes a sábado, de 7:00 a. m. a 7:00 p. m.</p>
         </aside>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Café Aurora</p>
-        <p>Escríbenos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a>.</p>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Café Aurora</p>
+            <p>Escríbenos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a>.</p>
+        </div>
     </footer>
-
 </body>
-
 </html>
