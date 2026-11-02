@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Comparación de la sección Lo más pedido de Café Aurora con CSS propio y con la grilla y utilidades de Bootstrap.">
+    <title>Comparativa CSS y Bootstrap | Café Aurora</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        :root {
+            --color-primario: #6f4e37;
+            --color-primario-oscuro: #513824;
+            --color-acento: #d9822b;
+            --color-texto: #2b2b2b;
+            --color-fondo: #f6efe6;
+            --color-borde: #e5d9cc;
+            --radio: 0.65rem;
+            --sombra: 0 6px 20px rgb(43 31 20 / 10%);
+        }
+
+        body {
+            margin: 0;
+            background: var(--color-fondo);
+            color: var(--color-texto);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--color-primario-oscuro);
+        }
+
+        .page-heading {
+            max-width: 48rem;
+        }
+
+        .eyebrow {
+            color: #9a531b;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .comparison-section {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            border: 1px solid var(--color-borde);
+            border-radius: var(--radio);
+            background: rgb(255 255 255 / 60%);
+        }
+
+        .demo-image {
+            display: block;
+            width: 100%;
+            height: 13rem;
+            object-fit: cover;
+        }
+
+        .own-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .own-card {
+            display: flex;
+            min-width: 0;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgb(111 78 55 / 8%);
+            border-radius: var(--radio);
+            background: #fff;
+            box-shadow: var(--sombra);
+        }
+
+        .own-card-content {
+            flex: 1;
+            padding: 1.25rem;
+        }
+
+        .own-card h3 {
+            margin: 0 0 0.75rem;
+            color: var(--color-primario);
+            font-size: 1.2rem;
+        }
+
+        .own-card p {
+            margin: 0;
+        }
+
+        .bootstrap-card-title {
+            color: var(--color-primario);
+        }
+
+        .code-note {
+            overflow-x: auto;
+            margin: 1.25rem 0 0;
+            padding: 1rem;
+            border-radius: 0.4rem;
+            background: #2b2b2b;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .comparison-table-wrap {
+            overflow-x: auto;
+            margin-top: 2rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--color-borde);
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .comparison-table thead {
+            background: var(--color-primario);
+            color: #fff;
+        }
+
+        .back-link {
+            color: var(--color-primario);
+            font-weight: 700;
+        }
+
+        @media (min-width: 561px) {
+            .own-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 801px) {
+            .own-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container py-5">
+        <header class="page-heading mb-4">
+            <p class="eyebrow mb-2">Café Aurora · Semana 2 · Día 2</p>
+            <h1 class="display-5 fw-bold">CSS propio y Bootstrap</h1>
+            <p class="lead">Comparamos dos maneras de maquetar la sección “Lo más pedido”. Ambas muestran los mismos productos y se adaptan a móvil, tableta y escritorio.</p>
+            <a class="back-link" href="../index.html">Volver al sitio de Café Aurora</a>
+        </header>
+
+        <section class="comparison-section" aria-labelledby="own-heading">
+            <p class="eyebrow mb-2">Versión 1</p>
+            <h2 id="own-heading" class="h3 mb-3">Con CSS propio</h2>
+            <p>La cuadrícula y el aspecto de las tarjetas se definen con reglas escritas para esta sección.</p>
+
+            <div class="own-grid">
+                <article class="own-card">
+                    <img class="demo-image" src="../img/latte.jpg" alt="Latte con arte en la espuma servido en una taza">
+                    <div class="own-card-content">
+                        <h3>Latte de la casa</h3>
+                        <p>Espresso doble con leche vaporizada.</p>
+                    </div>
+                </article>
+                <article class="own-card">
+                    <img class="demo-image" src="../img/cappuccino.jpg" alt="Cappuccino clásico con espuma servido en una taza">
+                    <div class="own-card-content">
+                        <h3>Cappuccino clásico</h3>
+                        <p>Espresso con leche y una capa generosa de espuma.</p>
+                    </div>
+                </article>
+                <article class="own-card">
+                    <img class="demo-image" src="../img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio">
+                    <div class="own-card-content">
+                        <h3>Café filtrado de origen</h3>
+                        <p>Grano de una sola finca, preparado con método de goteo.</p>
+                    </div>
+                </article>
+            </div>
+
+            <pre class="code-note"><code>.own-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 561px) { /* 2 columnas */ }
+@media (min-width: 801px) { /* 3 columnas */ }</code></pre>
+        </section>
+
+        <section class="comparison-section" aria-labelledby="bootstrap-heading">
+            <p class="eyebrow mb-2">Versión 2</p>
+            <h2 id="bootstrap-heading" class="h3 mb-3">Con grilla y utilidades de Bootstrap</h2>
+            <p>La grilla adaptable y el espaciado se aplican con clases preparadas por Bootstrap.</p>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <article class="h-100 d-flex flex-column overflow-hidden rounded-3 border bg-white shadow-sm">
+                        <img class="demo-image object-fit-cover" src="../img/latte.jpg" alt="Latte con arte en la espuma servido en una taza">
+                        <div class="d-flex flex-grow-1 flex-column p-3">
+                            <h3 class="bootstrap-card-title h5 fw-bold">Latte de la casa</h3>
+                            <p class="mb-0">Espresso doble con leche vaporizada.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col">
+                    <article class="h-100 d-flex flex-column overflow-hidden rounded-3 border bg-white shadow-sm">
+                        <img class="demo-image object-fit-cover" src="../img/cappuccino.jpg" alt="Cappuccino clásico con espuma servido en una taza">
+                        <div class="d-flex flex-grow-1 flex-column p-3">
+                            <h3 class="bootstrap-card-title h5 fw-bold">Cappuccino clásico</h3>
+                            <p class="mb-0">Espresso con leche y una capa generosa de espuma.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col">
+                    <article class="h-100 d-flex flex-column overflow-hidden rounded-3 border bg-white shadow-sm">
+                        <img class="demo-image object-fit-cover" src="../img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio">
+                        <div class="d-flex flex-grow-1 flex-column p-3">
+                            <h3 class="bootstrap-card-title h5 fw-bold">Café filtrado de origen</h3>
+                            <p class="mb-0">Grano de una sola finca, preparado con método de goteo.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <pre class="code-note"><code>&lt;div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"&gt;
+  &lt;div class="col"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;article class="h-100 d-flex flex-column rounded-3 bg-white shadow-sm"&gt;...&lt;/article&gt;</code></pre>
+        </section>
+
+        <section class="comparison-table-wrap" aria-labelledby="comparison-heading">
+            <h2 id="comparison-heading" class="h3">Comparación</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Aspecto</th>
+                        <th scope="col">CSS propio</th>
+                        <th scope="col">Bootstrap</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Columnas</th>
+                        <td>Se controlan con <code>grid-template-columns</code> y media queries.</td>
+                        <td>Se controlan con <code>row-cols-*</code> en la fila.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Separación</th>
+                        <td>Se define con <code>gap</code> en CSS.</td>
+                        <td>Se aplica con <code>g-4</code> en la fila y <code>p-3</code> en el contenido.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Control</th>
+                        <td>Permite decidir cada regla y cada breakpoint.</td>
+                        <td>Permite maquetar rápido con clases listas; usa los breakpoints del framework.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
