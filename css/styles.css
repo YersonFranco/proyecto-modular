@@ -60,12 +60,23 @@ body {
 }
 
 .product-image {
-    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: clamp(10rem, 18vw, 14rem);
     object-fit: cover;
 }
 
+.hero-image {
+    width: 100%;
+    max-height: 21rem;
+    object-fit: cover;
+}
+
+.carousel-frame {
+    max-width: 52rem;
+}
+
 .carousel-image {
-    height: min(60vw, 28rem);
+    height: clamp(12rem, 32vw, 21rem);
     object-fit: cover;
 }
 

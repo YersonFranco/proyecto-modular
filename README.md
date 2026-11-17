@@ -10,9 +10,9 @@ Los nombres, productos, precios, horarios y datos de contacto son ficticios. El 
 
 | Página | Contenido |
 |---|---|
-| [Inicio](index.html) | Presentación, tarjetas de productos, carrusel y horario. |
+| [Inicio](index.html) | Presentación, tarjetas de productos, carrusel, modal de bienvenida y horario. |
 | [Servicios y carta](pages/servicios.html) | Tarjetas de servicios y tabla de bebidas con precios. |
-| [Contacto](pages/contacto.html) | Formulario Bootstrap con validación, modal y datos de atención. |
+| [Contacto](pages/contacto.html) | Formulario Bootstrap con validación y aviso de confirmación. |
 | [Comparación de layouts](pages/comparativa-bootstrap.html) | El mismo conjunto de tarjetas con CSS propio y con grid y utilidades Bootstrap. |
 
 La navegación permite recorrer las páginas desde celular, tableta y escritorio. Los elementos interactivos —navbar colapsable, carrusel y modal— usan JavaScript de Bootstrap.
