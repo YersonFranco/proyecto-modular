@@ -16,7 +16,10 @@ El sitio principal tiene tres páginas conectadas entre sí:
 | Servicios | [`pages/servicios.html`](pages/servicios.html) | Servicios de la cafetería y carta de bebidas con precios. |
 | Contacto | [`pages/contacto.html`](pages/contacto.html) | Formulario demostrativo para consultas, reservas y pedidos empresariales. |
 
-También hay dos páginas de práctica en la carpeta `pages/pruebas/`: una compara CSS propio con Bootstrap y la otra presenta una página demostrativa con componentes de Bootstrap.
+También hay dos páginas de práctica en `pages/pruebas/`. Puedes abrirlas desde los dos enlaces nuevos al final de la página de Inicio, o desde los enlaces de esta sección:
+
+- [Comparativa de CSS propio y Bootstrap](pages/pruebas/comparativa-bootstrap.html).
+- [Landing con componentes Bootstrap](pages/pruebas/landing-bootstrap.html): incluye navbar colapsable, grilla, tarjetas, carrusel, formulario validado, alerta y modal.
 
 ## Recorrido del proyecto
 
@@ -54,7 +57,7 @@ La página [`pages/pruebas/comparativa-bootstrap.html`](pages/pruebas/comparativ
 
 #### Día 3: componentes y personalización de Bootstrap
 
-Se creó [`pages/pruebas/landing-bootstrap.html`](pages/pruebas/landing-bootstrap.html), una página de presentación que reúne en una sola vista una navegación que se pliega en pantallas pequeñas, tarjetas de productos, un formulario y una ventana modal (un mensaje que aparece encima de la página). Sus colores siguen la identidad de Café Aurora.
+Se creó [`pages/pruebas/landing-bootstrap.html`](pages/pruebas/landing-bootstrap.html), una página de presentación con navbar que se pliega en pantallas pequeñas, grilla, tarjetas, carrusel, formulario validado, alerta y modal. Sus colores siguen la identidad de Café Aurora.
 
 El formulario de esta página es solo una demostración: no envía ni guarda información. El botón abre el modal para mostrar el componente.
 
@@ -68,7 +71,7 @@ El formulario de esta página es solo una demostración: no envía ni guarda inf
 | Grid | Ordena elementos en filas y columnas. | Tarjetas de productos y servicios. |
 | Diseño adaptable | Ajusta la página a celulares, tabletas y pantallas grandes. | En las reglas responsive del CSS y la grilla de Bootstrap. |
 | Mobile-first | Empieza con los estilos para celular y amplía el diseño para pantallas mayores. | En `css/styles.css`. |
-| Bootstrap | Ofrece clases listas para maquetar grillas, espacios y componentes. | En “Lo más pedido” y en las páginas de `pages/pruebas/`. |
+| Bootstrap | Ofrece clases listas para maquetar grillas, espacios y componentes. | En “Lo más pedido” y en las páginas de `pages/pruebas/`, incluida la landing con navbar colapsable, tarjetas, carrusel, formulario validado, alerta y modal. |
 | Git y GitHub | Guardan el historial de cambios y permiten compartir el proyecto. | En el repositorio y sus commits. |
 
 ## Archivos del proyecto
