@@ -13,10 +13,10 @@ El sitio principal tiene tres páginas conectadas entre sí:
 | Página | Archivo | ¿Qué encontrarás? |
 |---|---|---|
 | Inicio | [`index.html`](index.html) | Presentación de Café Aurora, productos favoritos y horario. La sección de productos usa la grilla y algunas clases de Bootstrap. |
-| Servicios | [`servicios.html`](servicios.html) | Servicios de la cafetería y carta de bebidas con precios. |
-| Contacto | [`contacto.html`](contacto.html) | Formulario demostrativo para consultas, reservas y pedidos empresariales. |
+| Servicios | [`pages/servicios.html`](pages/servicios.html) | Servicios de la cafetería y carta de bebidas con precios. |
+| Contacto | [`pages/contacto.html`](pages/contacto.html) | Formulario demostrativo para consultas, reservas y pedidos empresariales. |
 
-También hay dos páginas de práctica en la carpeta `pruebas/`: una compara CSS propio con Bootstrap y la otra presenta una página demostrativa con componentes de Bootstrap.
+También hay dos páginas de práctica en la carpeta `pages/pruebas/`: una compara CSS propio con Bootstrap y la otra presenta una página demostrativa con componentes de Bootstrap.
 
 ## Recorrido del proyecto
 
@@ -50,11 +50,11 @@ En palabras sencillas, Flexbox ayuda a alinear elementos en una dirección, mien
 
 En la página de Inicio, la sección **“Lo más pedido”** pasó a usar la grilla adaptable y clases de espaciado de Bootstrap. El resto del sitio principal sigue usando los estilos propios del proyecto.
 
-La página [`pruebas/comparativa-bootstrap.html`](pruebas/comparativa-bootstrap.html) muestra la misma sección de productos de dos maneras: con CSS propio y con la grilla y utilidades de Bootstrap. La tabla al final resume las diferencias observadas.
+La página [`pages/pruebas/comparativa-bootstrap.html`](pages/pruebas/comparativa-bootstrap.html) muestra la misma sección de productos de dos maneras: con CSS propio y con la grilla y utilidades de Bootstrap. La tabla al final resume las diferencias observadas.
 
 #### Día 3: componentes y personalización de Bootstrap
 
-Se creó [`pruebas/landing-bootstrap.html`](pruebas/landing-bootstrap.html), una página de presentación que reúne en una sola vista una navegación que se pliega en pantallas pequeñas, tarjetas de productos, un formulario y una ventana modal (un mensaje que aparece encima de la página). Sus colores siguen la identidad de Café Aurora.
+Se creó [`pages/pruebas/landing-bootstrap.html`](pages/pruebas/landing-bootstrap.html), una página de presentación que reúne en una sola vista una navegación que se pliega en pantallas pequeñas, tarjetas de productos, un formulario y una ventana modal (un mensaje que aparece encima de la página). Sus colores siguen la identidad de Café Aurora.
 
 El formulario de esta página es solo una demostración: no envía ni guarda información. El botón abre el modal para mostrar el componente.
 
@@ -68,7 +68,7 @@ El formulario de esta página es solo una demostración: no envía ni guarda inf
 | Grid | Ordena elementos en filas y columnas. | Tarjetas de productos y servicios. |
 | Diseño adaptable | Ajusta la página a celulares, tabletas y pantallas grandes. | En las reglas responsive del CSS y la grilla de Bootstrap. |
 | Mobile-first | Empieza con los estilos para celular y amplía el diseño para pantallas mayores. | En `css/styles.css`. |
-| Bootstrap | Ofrece clases listas para maquetar grillas, espacios y componentes. | En “Lo más pedido” y en las páginas de `pruebas/`. |
+| Bootstrap | Ofrece clases listas para maquetar grillas, espacios y componentes. | En “Lo más pedido” y en las páginas de `pages/pruebas/`. |
 | Git y GitHub | Guardan el historial de cambios y permiten compartir el proyecto. | En el repositorio y sus commits. |
 
 ## Archivos del proyecto
@@ -76,8 +76,12 @@ El formulario de esta página es solo una demostración: no envía ni guarda inf
 ```text
 proyecto-modular/
 ├── index.html
-├── servicios.html
-├── contacto.html
+├── pages/
+│   ├── servicios.html
+│   ├── contacto.html
+│   └── pruebas/
+│       ├── comparativa-bootstrap.html
+│       └── landing-bootstrap.html
 ├── css/
 │   └── styles.css
 ├── img/
@@ -88,25 +92,22 @@ proyecto-modular/
 │   ├── servicio-local.jpg
 │   ├── servicio-reservas.jpg
 │   └── servicio-empresas.jpg
-├── pruebas/
-│   ├── comparativa-bootstrap.html
-│   └── landing-bootstrap.html
 └── README.md
 ```
 
-- `index.html`, `servicios.html` y `contacto.html` son las páginas principales.
+- `index.html` y las páginas de `pages/` son las páginas principales.
 - `css/styles.css` contiene los estilos compartidos del sitio principal.
 - `img/` guarda las fotografías usadas en las páginas.
-- `pruebas/` contiene las demostraciones de Bootstrap hechas durante la semana 2.
+- `pages/pruebas/` contiene las demostraciones de Bootstrap hechas durante la semana 2.
 - `README.md` explica el proyecto y cómo abrirlo.
 
 ## Ver las páginas publicadas
 
 - [Inicio de Café Aurora](https://yersonfranco.github.io/proyecto-modular/index.html)
-- [Servicios y carta](https://yersonfranco.github.io/proyecto-modular/servicios.html)
-- [Contacto](https://yersonfranco.github.io/proyecto-modular/contacto.html)
-- [Comparación de CSS propio y Bootstrap](https://yersonfranco.github.io/proyecto-modular/pruebas/comparativa-bootstrap.html)
-- [Página demostrativa de componentes Bootstrap](https://yersonfranco.github.io/proyecto-modular/pruebas/landing-bootstrap.html)
+- [Servicios y carta](https://yersonfranco.github.io/proyecto-modular/pages/servicios.html)
+- [Contacto](https://yersonfranco.github.io/proyecto-modular/pages/contacto.html)
+- [Comparación de CSS propio y Bootstrap](https://yersonfranco.github.io/proyecto-modular/pages/pruebas/comparativa-bootstrap.html)
+- [Página demostrativa de componentes Bootstrap](https://yersonfranco.github.io/proyecto-modular/pages/pruebas/landing-bootstrap.html)
 
 ## Abrir el proyecto en el computador
 
@@ -125,13 +126,13 @@ proyecto-modular/
 
 3. Abre `index.html` con Live Server. Desde la página de Inicio podrás navegar a Servicios y Contacto.
 
-Las páginas de práctica se pueden abrir directamente desde `pruebas/comparativa-bootstrap.html` y `pruebas/landing-bootstrap.html`.
+Las páginas de práctica se pueden abrir directamente desde `pages/pruebas/comparativa-bootstrap.html` y `pages/pruebas/landing-bootstrap.html`.
 
 **Conexión a internet:** las páginas que usan Bootstrap descargan sus estilos y componentes desde un servicio externo llamado CDN. Se necesita conexión para que esas partes se vean y funcionen. La página de presentación también carga JavaScript de Bootstrap para que funcionen el menú plegable y la ventana modal.
 
 ## Formularios y datos
 
-El formulario de `contacto.html` usa validación incorporada en el navegador. El proyecto no tiene un servidor que reciba los mensajes, así que el formulario principal tampoco envía consultas a una cafetería real.
+El formulario de `pages/contacto.html` usa validación incorporada en el navegador. El proyecto no tiene un servidor que reciba los mensajes, así que el formulario principal tampoco envía consultas a una cafetería real.
 
 ## Publicación y cambios
 
