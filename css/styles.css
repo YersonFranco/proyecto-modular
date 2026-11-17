@@ -6,6 +6,10 @@
     --cafe-texto: #2b2b2b;
     --bs-primary: #513824;
     --bs-primary-rgb: 81, 56, 36;
+    --bs-link-color: #6f4e37;
+    --bs-link-color-rgb: 111, 78, 55;
+    --bs-link-hover-color: #513824;
+    --bs-link-hover-color-rgb: 81, 56, 36;
     --bs-body-bg: #f6efe6;
     --bs-body-color: #2b2b2b;
 }
@@ -17,6 +21,29 @@ body {
 .navbar-cafe,
 .footer-cafe {
     background-color: var(--cafe-oscuro);
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--cafe-primario);
+    --bs-btn-border-color: var(--cafe-primario);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--cafe-oscuro);
+    --bs-btn-hover-border-color: var(--cafe-oscuro);
+    --bs-btn-active-bg: var(--cafe-oscuro);
+    --bs-btn-active-border-color: var(--cafe-oscuro);
+    --bs-btn-focus-shadow-rgb: 111, 78, 55;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--cafe-primario);
+    --bs-btn-border-color: var(--cafe-primario);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--cafe-primario);
+    --bs-btn-hover-border-color: var(--cafe-primario);
+    --bs-btn-active-bg: var(--cafe-oscuro);
+    --bs-btn-active-border-color: var(--cafe-oscuro);
+    --bs-btn-focus-shadow-rgb: 111, 78, 55;
 }
 
 .text-cafe,
