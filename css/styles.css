@@ -71,12 +71,8 @@ body {
     object-fit: cover;
 }
 
-.carousel-frame {
-    max-width: 52rem;
-}
-
 .carousel-image {
-    height: clamp(12rem, 32vw, 21rem);
+    height: clamp(14rem, 23vw, 19rem);
     object-fit: cover;
 }
 
