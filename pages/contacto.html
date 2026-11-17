@@ -1,88 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Escríbenos para hacer una reserva o un pedido para tu empresa en Café Aurora, Medellín. Completa el formulario de contacto y te respondemos.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Escríbenos para hacer una reserva o un pedido para tu empresa en Café Aurora, Medellín.">
     <title>Café Aurora | Contacto y reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <p class="logo"><a href="../index.html">Café Aurora</a></p>
-            <nav aria-label="Navegación principal">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="servicios.html">Servicios</a></li>
-                    <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+    <nav class="navbar navbar-expand-lg navbar-cafe" data-bs-theme="dark" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">Café Aurora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios y carta</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comparativa-bootstrap.html">Comparación CSS y Bootstrap</a></li>
                 </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="page-intro">
-            <p class="eyebrow">Estamos para ayudarte</p>
-            <h1>Contacto</h1>
-            <p>Cuéntanos qué necesitas y te respondemos pronto. Todos los campos son obligatorios, excepto el celular.</p>
-        </section>
-
-        <section class="contact-layout">
-            <div class="contact-card">
-                <h2>Escríbenos</h2>
-                <form action="#" method="post">
-                    <fieldset>
-                        <legend>Tus datos</legend>
-                        <div class="form-field">
-                            <label for="nombre">Nombre completo</label>
-                            <input type="text" id="nombre" name="nombre" autocomplete="name" minlength="3" maxlength="60" placeholder="Ej. Ana Pérez" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="correo">Correo electrónico</label>
-                            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="ejemplo@correo.com" required>
-                        </div>
-                        <div class="form-field">
-                            <label for="telefono">Celular (opcional)</label>
-                            <input type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="3[0-9]{9}" title="10 dígitos, sin espacios, que empiecen por 3" placeholder="Ej. 3001234567">
-                        </div>
-                    </fieldset>
-
-                    <fieldset>
-                        <legend>Tu mensaje</legend>
-                        <div class="form-field">
-                            <label for="motivo">Motivo</label>
-                            <select id="motivo" name="motivo" required>
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="reserva">Reservar</option>
-                                <option value="pedido">Pedido para empresa</option>
-                                <option value="consulta">Consulta general</option>
-                            </select>
-                        </div>
-                        <div class="form-field">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="500" placeholder="Cuéntanos cuántas personas son, qué día o qué necesitas" required></textarea>
-                        </div>
-                    </fieldset>
-                    <button type="submit">Enviar mensaje</button>
-                </form>
             </div>
+        </div>
+    </nav>
 
-            <aside class="hours contact-hours">
-                <p class="eyebrow">Visítanos</p>
-                <h2>Horario de atención</h2>
-                <p>Lunes a sábado</p>
-                <p class="hours-time">7:00 a. m. – 7:00 p. m.</p>
-                <p>También puedes escribirnos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a>.</p>
+    <main class="container py-5">
+        <header class="mb-5">
+            <p class="eyebrow mb-2">Estamos para ayudarte</p>
+            <h1 class="display-5 fw-bold text-cafe">Contacto</h1>
+            <p class="lead">Cuéntanos qué necesitas y te respondemos pronto. Completa los campos para validar el formulario.</p>
+        </header>
+
+        <div class="row g-4 align-items-start">
+            <section class="col-lg-8" aria-labelledby="formulario-titulo">
+                <div class="rounded-4 bg-white p-4 p-md-5 shadow-sm">
+                    <h2 class="h3 fw-bold text-cafe mb-4" id="formulario-titulo">Escríbenos</h2>
+                    <form id="formularioContacto" class="needs-validation" novalidate>
+                        <fieldset class="mb-4">
+                            <legend class="h5 fw-bold">Tus datos</legend>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label" for="nombre">Nombre completo</label>
+                                    <input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" minlength="3" maxlength="60" placeholder="Ej. Ana Pérez" required>
+                                    <div class="invalid-feedback">Escribe tu nombre completo (mínimo 3 caracteres).</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="correo">Correo electrónico</label>
+                                    <input class="form-control" type="email" id="correo" name="correo" autocomplete="email" placeholder="ejemplo@correo.com" required>
+                                    <div class="invalid-feedback">Escribe una dirección de correo válida.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="telefono">Celular (opcional)</label>
+                                    <input class="form-control" type="tel" id="telefono" name="telefono" autocomplete="tel" pattern="3[0-9]{9}" title="10 dígitos, sin espacios, que empiecen por 3" placeholder="Ej. 3001234567">
+                                    <div class="invalid-feedback">Usa 10 dígitos sin espacios, empezando por 3.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="motivo">Motivo</label>
+                                    <select class="form-select" id="motivo" name="motivo" required>
+                                        <option value="" selected disabled>Selecciona una opción</option>
+                                        <option value="reserva">Reservar una mesa</option>
+                                        <option value="empresa">Pedido para empresa</option>
+                                        <option value="consulta">Consulta general</option>
+                                    </select>
+                                    <div class="invalid-feedback">Selecciona el motivo de tu mensaje.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="mensaje">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="5" minlength="10" maxlength="500" placeholder="Cuéntanos cuántas personas son, qué día o qué necesitas" required></textarea>
+                                    <div class="invalid-feedback">Escribe un mensaje de al menos 10 caracteres.</div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button class="btn btn-primary" type="submit">Validar y continuar</button>
+                    </form>
+                </div>
+            </section>
+
+            <aside class="col-lg-4" aria-labelledby="visitanos-titulo">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <p class="eyebrow mb-2">Visítanos</p>
+                        <h2 class="card-title h4 fw-bold" id="visitanos-titulo">Café Aurora</h2>
+                        <p class="card-text">Medellín, Colombia</p>
+                        <p><strong>Horario:</strong><br>Lunes a sábado<br>7:00 a. m. – 7:00 p. m.</p>
+                        <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a>
+                    </div>
+                </div>
+                <div class="alert alert-info mt-4" role="alert">Este formulario es demostrativo. No envía ni almacena información.</div>
             </aside>
-        </section>
+        </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p>&copy; 2026 Café Aurora</p>
-            <p>Escríbenos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a>.</p>
-        </div>
-    </footer>
+    <footer class="footer-cafe py-4 text-white"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><p class="mb-0">© 2026 Café Aurora</p><p class="mb-0">Medellín, Colombia · <a class="link-light" href="../index.html">Volver al inicio</a></p></div></footer>
+
+    <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+            <div class="modal-header"><h2 class="modal-title h5 text-cafe" id="modalContactoTitulo">Formulario validado</h2><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Cerrar"></button></div>
+            <div class="modal-body">Los campos se validaron correctamente. Esta demostración no envía ni guarda tus datos.</div>
+            <div class="modal-footer"><button class="btn btn-primary" type="button" data-bs-dismiss="modal">Entendido</button></div>
+        </div></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const formularioContacto = document.getElementById('formularioContacto');
+        formularioContacto.addEventListener('submit', (event) => {
+            event.preventDefault();
+            formularioContacto.classList.add('was-validated');
+            if (formularioContacto.checkValidity()) {
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('modalContacto')).show();
+            }
+        });
+    </script>
 </body>
 </html>

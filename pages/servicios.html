@@ -1,76 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conoce los servicios de Café Aurora en Medellín: café en el local, reservas de mesa y pedidos para empresas. Mira también nuestra carta de bebidas con precios.">
-    <title>Café Aurora | Servicios y carta en Medellín</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conoce los servicios de Café Aurora en Medellín y consulta la carta de bebidas.">
+    <title>Café Aurora | Servicios y carta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <div class="header-inner">
-            <p class="logo"><a href="../index.html">Café Aurora</a></p>
-            <nav aria-label="Navegación principal">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="servicios.html" aria-current="page">Servicios</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+    <nav class="navbar navbar-expand-lg navbar-cafe" data-bs-theme="dark" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">Café Aurora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios y carta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comparativa-bootstrap.html">Comparación CSS y Bootstrap</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="page-intro">
-            <p class="eyebrow">Más que una taza de café</p>
-            <h1>Nuestros servicios</h1>
-            <p>En Café Aurora preparamos café de especialidad con granos de fincas colombianas. Estas son las formas de disfrutarlo.</p>
-        </section>
+    <main class="container py-5">
+        <header class="mb-5">
+            <p class="eyebrow mb-2">Más que una taza de café</p>
+            <h1 class="display-5 fw-bold text-cafe">Nuestros servicios</h1>
+            <p class="lead">En Café Aurora preparamos café de especialidad con granos de fincas colombianas. Estas son las formas de disfrutarlo.</p>
+        </header>
 
-        <section class="section-block">
-            <div class="section-heading">
-                <h2>Lo que hacemos</h2>
-            </div>
-            <div class="card-grid servicios">
-                <article class="card tarjeta">
-                    <img src="../img/servicio-local.jpg" alt="Mesas de madera con tazas de café en el interior de Café Aurora" width="400">
-                    <div class="card-content">
-                        <h3>Café en el local</h3>
-                        <p>Un espacio tranquilo para trabajar, conversar o leer, con café preparado al momento por nuestros baristas.</p>
-                        <p>Mira <a href="../index.html">lo más pedido</a> en la página de inicio.</p>
-                    </div>
-                </article>
-                <article class="card tarjeta">
-                    <img src="../img/servicio-reservas.jpg" alt="Mesa larga preparada para un grupo con tazas y platos de postre" width="400">
-                    <div class="card-content">
-                        <h3>Reservas de mesa</h3>
-                        <p>Reserva tu mesa para una reunión o una celebración pequeña y llega sin esperar. <strong>Indícanos cuántas personas son</strong> en el mensaje.</p>
-                        <p><a href="contacto.html">Reservar una mesa</a></p>
-                    </div>
-                </article>
-                <article class="card tarjeta">
-                    <img src="../img/servicio-empresas.jpg" alt="Termos de café y vasos listos para llevar sobre una mesa de oficina" width="400">
-                    <div class="card-content">
-                        <h3>Pedidos para empresas</h3>
-                        <p>Llevamos café a tu oficina o evento, en termos y con todo lo necesario para servirlo. <strong>Pide con un día de anticipación.</strong></p>
-                        <p><a href="contacto.html">Hacer un pedido para mi empresa</a></p>
-                    </div>
-                </article>
+        <section class="mb-5" aria-labelledby="servicios-titulo">
+            <h2 class="h2 fw-bold text-cafe mb-4" id="servicios-titulo">Lo que hacemos</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col"><article class="card h-100 border-0 shadow-sm">
+                    <img class="card-img-top product-image" src="../img/servicio-local.jpg" alt="Mesas de madera con tazas de café en el interior de Café Aurora" width="600" height="400">
+                    <div class="card-body"><h3 class="card-title h5 fw-bold">Café en el local</h3><p class="card-text">Un espacio tranquilo para trabajar, conversar o leer, con café preparado al momento por nuestros baristas.</p><a href="../index.html" class="card-link">Mira los favoritos de la casa</a></div>
+                </article></div>
+                <div class="col"><article class="card h-100 border-0 shadow-sm">
+                    <img class="card-img-top product-image" src="../img/servicio-reservas.jpg" alt="Mesa larga preparada para un grupo con tazas y platos de postre" width="600" height="400">
+                    <div class="card-body"><h3 class="card-title h5 fw-bold">Reservas de mesa</h3><p class="card-text">Reserva tu mesa para una reunión o una celebración pequeña. Indícanos cuántas personas son en el mensaje.</p><a href="contacto.html" class="card-link">Reservar una mesa</a></div>
+                </article></div>
+                <div class="col"><article class="card h-100 border-0 shadow-sm">
+                    <img class="card-img-top product-image" src="../img/servicio-empresas.jpg" alt="Termos de café y vasos listos para llevar sobre una mesa de oficina" width="600" height="400">
+                    <div class="card-body"><h3 class="card-title h5 fw-bold">Pedidos para empresas</h3><p class="card-text">Llevamos café a tu oficina o evento, en termos y con todo lo necesario para servirlo. Pide con un día de anticipación.</p><a href="contacto.html" class="card-link">Hacer un pedido empresarial</a></div>
+                </article></div>
             </div>
         </section>
 
-        <section class="section-block">
-            <div class="section-heading">
-                <p class="eyebrow">Preparado a tu gusto</p>
-                <h2>Nuestra carta</h2>
-            </div>
-            <div class="table-wrap">
-                <table>
-                    <caption>Carta de bebidas con precio por tamaño</caption>
-                    <thead>
-                        <tr><th scope="col">Bebida</th><th scope="col">Pequeña (8 oz)</th><th scope="col">Grande (12 oz)</th></tr>
-                    </thead>
+        <section class="mb-5" aria-labelledby="carta-titulo">
+            <p class="eyebrow mb-2">Preparado a tu gusto</p>
+            <h2 class="h2 fw-bold text-cafe mb-3" id="carta-titulo">Nuestra carta</h2>
+            <div class="table-responsive rounded-3 shadow-sm">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <caption class="caption-top px-3">Carta de bebidas con precio por tamaño</caption>
+                    <thead class="table-dark"><tr><th scope="col">Bebida</th><th scope="col">Pequeña (8 oz)</th><th scope="col">Grande (12 oz)</th></tr></thead>
                     <tbody>
                         <tr><th scope="row">Espresso</th><td>$4.500</td><td>$6.000</td></tr>
                         <tr><th scope="row">Latte de la casa</th><td>$8.500</td><td>$10.500</td></tr>
@@ -80,20 +65,15 @@
                     </tbody>
                 </table>
             </div>
-            <p>¿Tienes alguna duda sobre la carta? <a href="contacto.html">Escríbenos</a>.</p>
         </section>
 
-        <aside class="hours">
-            <div><p class="eyebrow">Te esperamos</p><h2>Horario de atención</h2></div>
-            <p>Lunes a sábado, de 7:00 a. m. a 7:00 p. m.</p>
-        </aside>
+        <div class="alert alert-light border d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2" role="alert">
+            <span><strong>Horario:</strong> lunes a sábado, de 7:00 a. m. a 7:00 p. m.</span>
+            <a class="alert-link" href="contacto.html">Consulta o reserva</a>
+        </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <p>&copy; 2026 Café Aurora</p>
-            <p>Escríbenos a <a href="mailto:hola@cafeaurora.example">hola@cafeaurora.example</a>.</p>
-        </div>
-    </footer>
+    <footer class="footer-cafe py-4 text-white"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><p class="mb-0">© 2026 Café Aurora</p><p class="mb-0">Medellín, Colombia · <a class="link-light" href="contacto.html">Contáctanos</a></p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

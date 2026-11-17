@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Comparación de la sección Lo más pedido de Café Aurora con CSS propio y con la grilla y utilidades de Bootstrap.">
-    <title>Comparativa CSS y Bootstrap | Café Aurora</title>
+    <meta name="description" content="Comparación del layout de productos de Café Aurora con CSS propio y con grid y utilidades de Bootstrap.">
+    <title>Comparación CSS y Bootstrap | Café Aurora</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
         :root {
             --color-primario: #6f4e37;
@@ -148,36 +149,50 @@
     </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-cafe" data-bs-theme="dark" aria-label="Navegación principal">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">Café Aurora</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios y carta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="comparativa-bootstrap.html">Comparación CSS y Bootstrap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main class="container py-5">
         <header class="page-heading mb-4">
-            <p class="eyebrow mb-2">Café Aurora · Semana 2 · Día 2</p>
-            <h1 class="display-5 fw-bold">CSS propio y Bootstrap</h1>
-            <p class="lead">Comparamos dos maneras de maquetar la sección “Lo más pedido”. Ambas muestran los mismos productos y se adaptan a móvil, tableta y escritorio.</p>
-            <a class="back-link" href="../../index.html">Volver al sitio de Café Aurora</a>
+            <p class="eyebrow mb-2">Café Aurora · Semana 2</p>
+            <h1 class="display-5 fw-bold">Comparación de layouts: CSS propio y Bootstrap</h1>
+            <p class="lead">El mismo conjunto de productos aparece primero con CSS propio y luego con el sistema grid y utilidades de Bootstrap. Ambas versiones se adaptan a celular, tableta y escritorio.</p>
+            <a class="back-link" href="../index.html">Volver al inicio de Café Aurora</a>
         </header>
 
         <section class="comparison-section" aria-labelledby="own-heading">
             <p class="eyebrow mb-2">Versión 1</p>
             <h2 id="own-heading" class="h3 mb-3">Con CSS propio</h2>
-            <p>La cuadrícula y el aspecto de las tarjetas se definen con reglas escritas para esta sección.</p>
+            <p>El layout y el aspecto de las tarjetas se definen con reglas CSS escritas para esta sección.</p>
 
             <div class="own-grid">
                 <article class="own-card">
-                    <img class="demo-image" src="../../img/latte.jpg" alt="Latte con arte en la espuma servido en una taza">
+                    <img class="demo-image" src="../img/latte.jpg" alt="Latte con arte en la espuma servido en una taza">
                     <div class="own-card-content">
                         <h3>Latte de la casa</h3>
                         <p>Espresso doble con leche vaporizada.</p>
                     </div>
                 </article>
                 <article class="own-card">
-                    <img class="demo-image" src="../../img/cappuccino.jpg" alt="Cappuccino clásico con espuma servido en una taza">
+                    <img class="demo-image" src="../img/cappuccino.jpg" alt="Cappuccino clásico con espuma servido en una taza">
                     <div class="own-card-content">
                         <h3>Cappuccino clásico</h3>
                         <p>Espresso con leche y una capa generosa de espuma.</p>
                     </div>
                 </article>
                 <article class="own-card">
-                    <img class="demo-image" src="../../img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio">
+                    <img class="demo-image" src="../img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio">
                     <div class="own-card-content">
                         <h3>Café filtrado de origen</h3>
                         <p>Grano de una sola finca, preparado con método de goteo.</p>
@@ -197,13 +212,13 @@
 
         <section class="comparison-section" aria-labelledby="bootstrap-heading">
             <p class="eyebrow mb-2">Versión 2</p>
-            <h2 id="bootstrap-heading" class="h3 mb-3">Con grilla y utilidades de Bootstrap</h2>
-            <p>La grilla adaptable y el espaciado se aplican con clases preparadas por Bootstrap.</p>
+            <h2 id="bootstrap-heading" class="h3 mb-3">Con grid y utilidades de Bootstrap</h2>
+            <p>El sistema grid adaptable y el espaciado se aplican con clases de Bootstrap.</p>
 
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <article class="h-100 d-flex flex-column overflow-hidden rounded-3 border bg-white shadow-sm">
-                        <img class="demo-image object-fit-cover" src="../../img/latte.jpg" alt="Latte con arte en la espuma servido en una taza">
+                        <img class="demo-image object-fit-cover" src="../img/latte.jpg" alt="Latte con arte en la espuma servido en una taza">
                         <div class="d-flex flex-grow-1 flex-column p-3">
                             <h3 class="bootstrap-card-title h5 fw-bold">Latte de la casa</h3>
                             <p class="mb-0">Espresso doble con leche vaporizada.</p>
@@ -212,7 +227,7 @@
                 </div>
                 <div class="col">
                     <article class="h-100 d-flex flex-column overflow-hidden rounded-3 border bg-white shadow-sm">
-                        <img class="demo-image object-fit-cover" src="../../img/cappuccino.jpg" alt="Cappuccino clásico con espuma servido en una taza">
+                        <img class="demo-image object-fit-cover" src="../img/cappuccino.jpg" alt="Cappuccino clásico con espuma servido en una taza">
                         <div class="d-flex flex-grow-1 flex-column p-3">
                             <h3 class="bootstrap-card-title h5 fw-bold">Cappuccino clásico</h3>
                             <p class="mb-0">Espresso con leche y una capa generosa de espuma.</p>
@@ -221,7 +236,7 @@
                 </div>
                 <div class="col">
                     <article class="h-100 d-flex flex-column overflow-hidden rounded-3 border bg-white shadow-sm">
-                        <img class="demo-image object-fit-cover" src="../../img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio">
+                        <img class="demo-image object-fit-cover" src="../img/filtrado.jpg" alt="Café filtrado cayendo en una jarra de vidrio">
                         <div class="d-flex flex-grow-1 flex-column p-3">
                             <h3 class="bootstrap-card-title h5 fw-bold">Café filtrado de origen</h3>
                             <p class="mb-0">Grano de una sola finca, preparado con método de goteo.</p>
@@ -237,10 +252,10 @@
 &lt;article class="h-100 d-flex flex-column rounded-3 bg-white shadow-sm"&gt;...&lt;/article&gt;</code></pre>
         </section>
 
-        <section class="comparison-table-wrap" aria-labelledby="comparison-heading">
+        <section class="table-responsive my-5" aria-labelledby="comparison-heading">
             <h2 id="comparison-heading" class="h3">Comparación</h2>
-            <table class="comparison-table">
-                <thead>
+            <table class="table table-bordered table-striped align-middle bg-white">
+                <thead class="table-dark">
                     <tr>
                         <th scope="col">Aspecto</th>
                         <th scope="col">CSS propio</th>
@@ -267,5 +282,7 @@
             </table>
         </section>
     </main>
+    <footer class="footer-cafe py-4 text-white"><div class="container d-flex flex-column flex-md-row justify-content-between gap-2"><p class="mb-0">© 2026 Café Aurora</p><p class="mb-0"><a class="link-light" href="../index.html">Volver al inicio</a></p></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
